@@ -1,0 +1,19 @@
+minimum_cumulusci_version: '3.11.0'
+project:
+    name: cci
+    package:
+        name:  cci
+        api_version: '48.0'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/cci/tests
+            options:
+                outputdir: robot/cci/results
+
+    robot_testdoc:
+        options:
+            path: robot/cci/tests
+            output: robot/cci/doc/cci_tests.html
